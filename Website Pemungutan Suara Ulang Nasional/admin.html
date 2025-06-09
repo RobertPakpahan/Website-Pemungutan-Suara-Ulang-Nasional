@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | NexaCorp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo animate">
+                     <img src="images/logo.svg" alt="Logo Perusahaan" class="logo-image">
+                    <span>XXXXX</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active"><i class="fas fa-tachometer-alt"></i> Admin Dashboard</a></li>
+                    <li><a href="index.html#about" class="nav-link">HOME</a></li>
+                    <li><a href="index.html#news" class="nav-link">Berita</a></li>
+                    <li><a href="#" id="logoutBtn" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+                
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section admin-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">Admin Dashboard</h2>
+                <div class="user-profile">
+                    <img src="images/admin-avatar.jpg" alt="Admin Avatar" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name" id="adminName"></span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Cari dokumen..." id="searchInput">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-controls">
+                    <select id="statusFilter">
+                        <option value="all">Semua Status</option>
+                        <option value="approved">Disetujui</option>
+                        <option value="pending">Menunggu</option>
+                        <option value="rejected">Ditolak</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="admin-documents">
+                <div class="admin-document-header">
+                    <div>Status</div>
+                    <div>Dokumen</div>
+                    <div>Pengguna</div>
+                    <div>Aksi</div>
+                </div>
+                
+                <div class="admin-document-list" id="adminDocumentList">
+                    <!-- Dokumen akan dimuat via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer sama dengan index.html -->
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
